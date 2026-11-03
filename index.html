@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MELON FIELD</title>
+    <style>
+        /* 1. 기본 설정 */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: "Times New Roman", Times, serif;
+            font-size: 13.5px;
+            color: #000;
+            overflow-x: hidden;
+            scroll-behavior: smooth; /* 스크롤 이동 부드럽게 설정 */
+        }
+
+        .split-screen {
+            display: flex;
+            flex-direction: column; 
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        .left-side {
+            flex: 1;
+            padding: 30px;
+            border-bottom: 2px solid #000; 
+            box-sizing: border-box;
+        }
+
+        .right-side {
+            flex: 1; 
+            padding: 30px;
+            box-sizing: border-box;
+        }
+
+        /* 💡 오직 리스트 한 줄 한 줄에만 촘촘한 간격 적용 */
+        .list-item, .exhibit-item {
+            margin: 2px 0 !important; 
+            line-height: 1.4;
+            display: block;
+        }
+
+        /* 클릭 가능한 리스트 스타일 (평소엔 검은색, 마우스 올리면 파란색+밑줄) */
+        .exhibit-item {
+            cursor: pointer;
+            color: #000;
+            text-decoration: none;
+        }
+        .exhibit-item:hover {
+            text-decoration: underline;
+            color: #0000EE;
+        }
+
+        /* 아코디언 스타일 */
+        .toggle-btn {
+            cursor: pointer;
+            font-weight: bold;
+            text-decoration: none;
+            display: block;
+            margin: 6px 0 !important;
+            color: #000;
+        }
+        .toggle-btn:hover {
+            text-decoration: underline;
+            color: #0000EE;
+        }
+        
+        .toggle-content {
+            display: none;
+            padding: 15px;
+            line-height: 1.8;
+            background-color: #f9f9f9;
+            margin: 10px 0 15px 0;
+            text-align: left;
+            border-left: 1px solid #000;
+        }
+        .toggle-content.show {
+            display: block;
+        }
+
+        /* 오른쪽 콘텐츠 제어 */
+        .content-group {
+            display: none;
+        }
+        .content-group.active {
+            display: block;
+        }
+
+        @media (min-width: 768px) {
+            body, html { height: 100%; overflow: hidden; }
+            .split-screen {
+                flex-direction: row;
+                height: 100vh;
+            }
+            .left-side {
+                height: 100vh;
+                overflow-y: auto;
+                border-right: 2px solid #000;
+                border-bottom: none;
+                padding: 40px;
+            }
+            .right-side {
+                height: 100vh;
+                overflow-y: auto;
+                padding: 40px;
+            }
+        }
+
+        hr { border: 0; border-top: 2px solid #000; margin: 25px 0; }
+        hr.divider { border-top: 1px solid #000; margin: 60px 0 40px 0; }
+        
+        a { color: #000; text-decoration: none; }
+        a:hover { color: #0000EE; text-decoration: underline; }
+        
+        .section-title { 
+            font-size: 14px; 
+            font-weight: bold; 
+            margin-top: 15px;
+            margin-bottom: 5px; 
+        }
+        mark { background-color: #eee; padding: 0 2px; }
+
+        .media-container { margin-bottom: 15px; }
+        .archive-img { width: 100%; margin-bottom: 10px; display: block; }
+        
+        /* 💡 이미지 밑 캡션 스타일 */
+        .caption { 
+            font-family: "Times New Roman", Times, serif !important;
+            font-size: 13px !important; 
+            line-height: 1.7 !important;
+            color: #333 !important; 
+            margin-bottom: 40px; 
+        }
+    </style>
+</head>
+<body>
+
+<div class="split-screen">
+    <!-- 왼쪽 영역 (목록 및 약력) -->
+    <div class="left-side">
+        <div style="margin-bottom: 20px;">
+            <strong class="exhibit-item" onclick="showContent('default-content')">KIXUNG EUM</strong><br><br>
+            <div class="list-item">Lives and Works Incheon, Seoul, Korea</div>
+            <br><br>
+            <div class="list-item">Email : <a href="mailto:kixungeum@gmail.com">kixungeum@gmail.com</a></div>
+            <div class="list-item">Instagram : <a href="https://www.instagram.com/xkixungx" target="_blank">@xkixungx</a></div>
+            <br><br>
+            <div class="list-item">Education</div>
+            <div class="list-item">2026 JungChanil, Kookmin University, Seoul, Korea</div>
+            <div class="list-item">2013 B.F.A in Ceramic Design, Sangmyung University, Cheonan, Korea</div>
+            <br><br>
+        </div>
+        </script>
+</body>
+</html>

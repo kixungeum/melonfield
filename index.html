@@ -185,6 +185,7 @@
 </div>
 
 <script>
+  // 기존 토글 함수
   function showContent(id) {
     var target = document.getElementById(id);
     if (target) {
@@ -194,6 +195,15 @@
         target.style.display = "none";
       }
     }
+  }
+
+  // 💡 [추가할 함수] 로고를 눌렀을 때 모든 상세 창을 닫아주는 함수
+  function goHome() {
+    var historyDiv = document.getElementById('history-detail');
+    var exhibitDiv = document.getElementById('exhibition-detail');
+    
+    if (historyDiv) historyDiv.style.display = "none";
+    if (exhibitDiv) exhibitDiv.style.display = "none";
   }
 </script>
 </body>

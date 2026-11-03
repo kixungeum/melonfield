@@ -53,13 +53,13 @@
             color: #0000EE;
         }
 
-        /* 💡 PDF 원본 라인 및 줄바꿈을 그대로 유지해주는 스타일 */
+        /* PDF 원본 라인 및 줄바꿈 유지 스타일 */
         .intro-text {
-            max-width: 600px;      /* PDF 본문과 비슷한 폭 고정 */
+            max-width: 600px;      
             line-height: 1.8;      
             margin-top: 15px;
             font-size: 13.5px;
-            white-space: pre-line; /* 작성된 줄바꿈 그대로 화면에 출력 */
+            white-space: pre-line; 
         }
 
         @media (min-width: 768px) {
@@ -114,9 +114,13 @@
     <!-- 왼쪽 영역 (목록 및 약력) -->
     <div class="left-side">
         <div style="margin-bottom: 20px;">
-            <strong class="exhibit-item" onclick="showContent('default-content')">MELON FIELD</strong><br><br>
-            <div class="list-item">1F, 2, Chamoejeon-ro 13beon-gil, Jemulpo-gu, Korea</div>
-            <div class="list-item">인천광역시 제물포구 참외전로 13번길 2 1층</div>
+            <!-- 💡 MELON FIELD 텍스트를 로고 이미지로 대체 (클릭 시 기본 화면으로 이동) -->
+            <span class="exhibit-item" onclick="showContent('default-content')" style="display: inline-block; cursor: pointer;">
+                <img src="images/logo.png" alt="MELON FIELD" style="height: 24px; display: block;">
+            </span>
+            <br><br>
+            
+            <div class="list-item">2, Chamoejeon-ro 13beon-gil, Jemulpo-gu, Korea</div>
             <br><br>
             <div class="list-item">Email : <a href="mailto:melonfield.kr@gmail.com">melonfield.kr@gmail.com</a></div>
             <div class="list-item">Instagram : <a href="https://www.instagram.com/melonfield.kr" target="_blank">@melonfield.kr</a></div>
@@ -130,7 +134,7 @@
             <div id="exhibition-detail" style="display: none; margin-top: 20px;">
                 <img src="images/poster.jpg" alt="전시 이미지" style="max-width: 50%; display: block; margin-bottom: 15px;">
                 
-                <!-- PDF 원본의 줄바꿈과 라인이 그대로 살아나는 영역 -->
+                <!-- PDF 원본의 줄바꿈과 라인이 살아있는 서문 영역 -->
                 <div class="intro-text">정찬일 개인전 《사랑한다 그러나 너만 빼고》
 01. '멜론필드(Melon Field)'는 참외의 영어명인 '코리안 멜론(Korean Melon)'의 멜론과 대지, 땅을 뜻하는 '필드(Field)'가 합쳐진 이름이다. 예전 이곳 인근은 참외밭과 참외 시장이 오가던 지역으로, 경기도 방언으로는 '채미전'이라 불렸다고 한다. 우리가 아는 이 노란 참외는 사실 한국에서 거의 유일하게 소비되는 과일이기도 하다. 멜론필드는 완성된 전시장이라기보다 수많은 가능성이 요동칠 수 있는 실험적 그라운드라는 거대한 목적을 안고 2026년 11월 6일 첫 영업을 개시한다.
 02. 작년 이맘때쯤, 《아르코 댄스 UP:RISE 2025》를 통해 정찬일이 기획한 공연 《XXX》를 보았다. 노란 비닐포가 깔린 배경 위에서 두 인간이 살기 위해, 어쩌면 사랑하기 위해 처절하게 몸부림치던 장면이 잔상처럼 남아있다.
